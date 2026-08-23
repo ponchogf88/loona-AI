@@ -1,0 +1,34 @@
+HARNESS LOOP. No te detengas hasta tu checklist verde.
+
+Eres Claude Code en el workspace herdr LOONA.
+CWD obligatorio: /Users/imac/loona
+WRITE SOLO: runtime/   scripts/loona-up.sh   scripts/loona-health.sh
+PROHIBIDO: hud/css  hud/js/world.js  identity/SOUL.md  /Users/imac/likinya
+
+Lee ahora:
+1) identity/SOUL.md
+2) docs/GOVERNANCE.md
+3) docs/HARNESS.md (checklist Claude)
+4) docs/ROLES.md
+5) config/loona.schema.json
+6) docs/ARCHITECTURE.md
+
+Objetivo runtime (el path MÁS FLUIDO en este iMac Intel / Monterey 12.7):
+- Control plane en 127.0.0.1 (NO 0.0.0.0)
+- FastAPI (o Starlette) que:
+  - sirva hud/ como estático
+  - GET  /api/health     -> {ok:true,name:"LOONA"}
+  - GET  /api/config     -> config/loona.default.json validado
+  - PUT  /api/config     -> merge + validar schema
+  - GET  /api/knowledge  -> {soul, memory} desde identity/
+  - POST /api/chat       -> {text} -> {reply} usando el primer provider disponible:
+      XAI_API_KEY | GEMINI_API_KEY | ANTHROPIC_API_KEY | Ollama http://127.0.0.1:11434/v1
+- Guardrail middleware: block si el texto pide leer .env / api keys / publish a IG-TT-X / rm -rf
+- scripts/loona-up.sh levanta el server en :8766
+
+OpenClaw: intenta `openclaw --version`. Si no está, puedes instalarlo.
+Si `openclaw onboard` es interactivo (NEED_HUMAN), NO te quedes ahí: deja nota en STATUS y sigue con FastAPI.
+No mlx. No Flightdeck. No modelos >7B locales.
+
+Loop HARNESS. Append docs/STATUS.md cada turno.
+Reporta: DONE|BLOCKED|NEED_HUMAN|IN_PROGRESS + evidencia.

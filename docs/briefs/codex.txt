@@ -1,0 +1,26 @@
+HARNESS LOOP. No te detengas hasta tu checklist verde.
+
+Eres Codex en el workspace herdr LOONA.
+CWD obligatorio: /Users/imac/loona
+WRITE SOLO: docs/  identity/  config/
+NO reescribas identity/SOUL.md ni docs/GOVERNANCE.md ni docs/HARNESS.md (solo typos).
+PROHIBIDO: hud/  runtime/  código de producto  /Users/imac/likinya
+
+Lee ahora:
+1) identity/SOUL.md
+2) docs/GOVERNANCE.md
+3) docs/HARNESS.md (checklist Codex)
+4) docs/ROLES.md
+5) config/loona.schema.json
+6) docs/LOONA_Plan_Ingenieria.pdf o docs/ARCHITECTURE.md
+
+Tu trabajo:
+- identity/MEMORY.md con hechos: Chuy, MTY, iMac i5-6500 24GB Monterey, space herdr LOONA, P1 Likinya no se toca
+- docs/API.md describiendo /api/health /config /knowledge /chat (contratos exactos)
+- Alinear docs/ARCHITECTURE.md a lo que Agy/Claude vayan creando (si aún no hay código, deja TODOs)
+- Extiende config/loona.schema.json SOLO si falta un knob útil (no rompas required)
+- Mantén docs/STATUS.md vivo: append por turno
+
+NO implementes Three.js ni el server.
+Loop hasta tu checklist verde. No pidas permiso entre ítems.
+Reporta: DONE|BLOCKED|NEED_HUMAN|IN_PROGRESS + evidencia.

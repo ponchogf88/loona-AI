@@ -1,0 +1,24 @@
+HARNESS. Trabaja. No te detengas. Eres Agy en /Users/imac/loona.
+
+WRITE solo: hud/css hud/index.html (selectores si hace falta) refs/product/*.png
+PROHIBIDO: runtime/ docs/GUMROAD likinya identity/
+
+Skill: loona-ops. Live: http://127.0.0.1:8766  (Cmd+Shift+R)
+
+El founder está enojado: Grok hizo todo y tú estabas idle. AHORA tú.
+
+P0 visual:
+1) Cabeza CHICA densa oro en el CENTRO (no galaxia). Zoey-scale.
+2) Widgets Liquid Glass iOS 26 (ya hay CSS: .float). No los aplanes.
+3) Pill Capture arriba al centro. No lo borres.
+4) Brand: wordmark es brand/lockup.png. Favicon mark. No vuelvas a Syne.
+
+Screenshots DISTINTOS (filesize distinto) a:
+refs/product/01-world.png
+refs/product/02-news-tv.png
+refs/product/03-calendar-glass.png
+refs/product/04-capture-mirror.png
+refs/product/05-app-icon-dock.png
+
+Si Chrome DevTools MCP truena, di BLOCKED + qué te falta. No te quedes callado.
+Reporta DONE|BLOCKED + evidencia.

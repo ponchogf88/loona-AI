@@ -1,0 +1,8 @@
+HARNESS. Eres Codex en /Users/imac/loona. NO hud/. NO runtime/. NO Soltek.
+
+WRITE: docs/API.md docs/PENDIENTES.md docs/STATUS.md docs/PLAN_CASA_APEX.md (solo pulir, no contradecir días)
+docs/VISUAL_DNA.md alinear con Nest/Eufy como boca/ojos.
+
+Documenta /api/devices /api/cast/tts /api/eyes/* cuando Claude los deje.
+P0: Nest Hub 2 Cast, Eufy T8417 frame, HUD Apex. Venta = después de 7 días de uso en casa.
+Reporta DONE + paths.

@@ -1,0 +1,59 @@
+{
+  "identity": {
+    "name": "LOONA",
+    "owner": "Chuy",
+    "timezone": "America/Monterrey",
+    "language": "auto"
+  },
+  "world": {
+    "particleCount": 11000,
+    "paletteFrom": "#F3D19A",
+    "paletteTo": "#8A4A1A",
+    "headMorph": "humanoid",
+    "rotationSpeed": 0.25,
+    "bloom": false,
+    "showOrbs": true
+  },
+  "voice": {
+    "wakeWord": "loona",
+    "mode": "typed-only",
+    "stt": "browser",
+    "tts": "browser"
+  },
+  "brain": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "baseUrl": "https://api.deepseek.com/v1",
+    "dailyTokenCap": 200000,
+    "temperature": 0.4
+  },
+  "memory": {
+    "soulPath": "identity/SOUL.md",
+    "retentionDays": 90,
+    "compound": true
+  },
+  "guardrails": {
+    "sandbox": true,
+    "allowPublish": false,
+    "allowSecretRead": false,
+    "allowComputerUseOutsideWorkspace": false,
+    "askOnIrreversible": true
+  },
+  "channels": {
+    "telegram": false,
+    "hud": true,
+    "bind": "127.0.0.1"
+  },
+  "hud": {
+    "port": 8766,
+    "chatDefaultWidth": 360,
+    "showActivity": true,
+    "knowledgeOpen": false
+  },
+  "study": { "enabled": true },
+  "companions": [
+    { "id": "brain", "name": "Brain", "role": "razonar y responder", "color": "#5EEAD4", "model": "inherit", "skills": ["chat"] },
+    { "id": "memory", "name": "Memory", "role": "wiki y recall", "color": "#7C5CFF", "skills": ["knowledge"] },
+    { "id": "ops", "name": "Ops", "role": "files y status", "color": "#94A3B8", "skills": ["files"] }
+  ]
+}

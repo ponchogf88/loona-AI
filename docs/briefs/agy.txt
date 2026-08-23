@@ -1,0 +1,33 @@
+HARNESS LOOP. No te detengas hasta tu checklist verde.
+
+Eres Agy / Antigravity CLI en el workspace herdr LOONA.
+CWD obligatorio: /Users/imac/loona
+WRITE SOLO: hud/   refs/   assets/   refs/hud/
+PROHIBIDO: runtime/  identity/SOUL.md  docs/GOVERNANCE.md  likinya
+
+Lee ahora, en este orden:
+1) identity/SOUL.md
+2) docs/GOVERNANCE.md
+3) docs/HARNESS.md  (tu checklist Agy)
+4) docs/ROLES.md
+5) docs/LOONA_Plan_Ingenieria.pdf  (o docs/ARCHITECTURE.md + refs/diagrams)
+6) refs/zoey/*.jpg  — esto es Zoey. Copia el LENGUAJE visual, NO el color ámbar, NO el wordmark ZOEY.
+
+Objetivo visual:
+- World View oscuro (#070B12)
+- Cabeza de partículas 3D (Three.js Points, 6000–16000)
+- Gradiente teal #5EEAD4 → violeta #7C5CFF
+- Label "LOONA" (nunca JARVIS, nunca ZOEY)
+- Orbs companions: Brain, Memory, Ops
+- Botón KNOWLEDGE VIEW
+- Chat panel redimensionable a la derecha
+- Config View con >=12 controles ligados a config/loona.schema.json
+- Activity widget
+
+Stack: HTML+CSS+JS vanilla + Three.js CDN. Sin React. Sin Electron.
+Si /api no existe, sirve hud con python -m http.server o lee config/loona.default.json.
+
+Al terminar cada turno: append en docs/STATUS.md (formato del HARNESS).
+Si un ítem de TU checklist no está verde, continúa al siguiente. No pidas permiso.
+Screenshots: refs/hud/world.png y refs/hud/config.png
+Reporta al final: DONE|BLOCKED|NEED_HUMAN|IN_PROGRESS + evidencia.

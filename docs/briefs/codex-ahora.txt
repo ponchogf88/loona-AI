@@ -1,0 +1,20 @@
+HARNESS. Sigue. Eres Codex en /Users/imac/loona.
+
+WRITE solo: docs/PENDIENTES.md docs/STATUS.md docs/BANDA_CEREBRO_LOONA.md docs/QUIEN_HIZO_QUE.md docs/API.md (si Claude agrega /api/dash/*)
+
+PROHIBIDO: hud/ runtime/ brand/ likinya
+
+Skill loona-ops.
+
+El founder dijo que no ve moverse a nadie. Actualiza la verdad:
+
+- Hecho por Grok (no lo borres, no lo atribuyas a ti): morph, briefing, liquid glass, capture, brand files, vault, iCloud
+- Agy: idle/error — deuda screenshots
+- Claude: runtime 24/7 / dash APIs
+- Tú: docs honestos
+- Explainer 2:40 NEED_HUMAN créditos Higgsfield (0)
+- Dashboards /dash.html son SHELL no datos reales
+
+PENDIENTES.md = una verdad. STATUS una entrada 2026-08-12 tarde con IN_PROGRESS banda.
+No declares explainer DONE.
+Reporta DONE + paths.

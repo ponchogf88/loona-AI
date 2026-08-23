@@ -1,0 +1,15 @@
+HARNESS. Eres Claude Code en /Users/imac/loona. NO hud/css. NO Soltek. NO likinya.
+
+WRITE: runtime/cast.py runtime/eyes.py runtime/app.py (endpoints) runtime/requirements.txt
+Lee docs/PLAN_CASA_APEX.md
+
+Día 1–2:
+1) pip pychromecast en runtime/.venv
+2) GET /api/devices → lista Chromecast/Nest en LAN (nombres, uuid, model). Si vacío: {ok:false, hint:"Hub en la misma Wi-Fi"}
+3) POST /api/cast/tts {text} → sintetiza con tts.py existente y reproduce en el device cuyo nombre contenga "Nest" o "Hub" o el primero.
+4) GET /api/eyes/status → {desktop: true, eufy: false} hasta que Chuy ponga EUFY_RTSP_URL en runtime/.env (NO loguees la URL completa).
+5) GET /api/eyes/snap?src=desktop stub 501; src=eufy si hay env.
+
+No pongas API keys. Reinicia con LOONA_SKIP_PIP=1 solo si hace falta instalar pychromecast (esta vez SÍ pip).
+Curl de evidencia en docs/STATUS.md bloque Claude.
+DONE|BLOCKED.

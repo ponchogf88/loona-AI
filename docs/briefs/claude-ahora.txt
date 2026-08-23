@@ -1,0 +1,15 @@
+HARNESS. Trabaja. Eres Claude Code en /Users/imac/loona.
+
+WRITE solo: runtime/  (app.py, módulos nuevos, tests curl)
+PROHIBIDO: hud/ css/ js/ brand/ likinya docs/GUMROAD
+
+Skill loona-ops. Live 127.0.0.1:8766.
+
+El founder quiere la BANDA, no a Grok solo. Tu piso:
+
+1) Verifica GET /api/health /weather /briefing /calendar /news?topic=ai y POST /api/capture (multipart). Si /api/capture no está en el proceso vivo, reinicia con LOONA_SKIP_PIP=1 scripts/loona-up.sh
+2) /api/calendar: deja de ser solo seed. Si puedes leer Google Calendar sin pegar keys en chat, cablea. Si no, documenta NEED_HUMAN en runtime/README o un comentario y deja el seed honesto.
+3) Nuevo GET /api/dash/health /api/dash/finance /api/dash/exercise — JSON de ESTRUCTURA (claves reales) con valores null o seed MARCADOS "placeholder": true. No inventes saldos de Chuy.
+4) Entrada en docs/STATUS.md SOLO tu bloque Claude.
+
+No toques CSS. Reporta DONE|BLOCKED + curls.

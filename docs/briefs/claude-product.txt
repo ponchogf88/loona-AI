@@ -1,0 +1,28 @@
+HARNESS. Empaqueta LOONA para estudios de uso, desempeño multi-usuario y venta.
+
+Eres Claude Code en /Users/imac/loona.
+WRITE: runtime/ (excepto no romper /api existentes) scripts/ README.md LICENSE telemetry/
+PROHIBIDO: hud/css hud/js/world.js  /Users/imac/likinya  no reescribas el 3D.
+
+Lee docs/PRODUCT_LOONA.md
+
+Haz TODO esto en este turno (producto, no prototipo):
+
+1) README.md de venta/install: qué es, requisitos iMac/Mac, LOONA.app, 24/7 LaunchAgent, .env (DeepSeek/Gemini/Telegram) SIN keys.
+2) LICENSE MIT.
+3) runtime/telemetry.py + POST /api/event  y GET /api/metrics
+   - opt-in: config.study.enabled default false
+   - eventos: session_start, chat, news_open, tts, timeline_range, error
+   - guarda JSONL en runtime/state/usage.jsonl (gitignored)
+   - metrics: latency p50/p95 chat, tts, uptime, counts
+   - documenta cómo un estudio de uso exporta el JSONL
+4) Desempeño “si lo usan muchos”:
+   - nota honesta: v1 es single-operator local
+   - añade runtime/limits.py: rate limit por IP, max concurrent chats=4
+   - ROADMAP.md 10 líneas: multi-seat, auth, hosted
+5) App: revisa scripts/loona-app.sh loona-up.sh loona-install-login.sh. Si faltan, no rompas. Añade scripts/loona-uninstall.sh
+6) .gitignore ya existe: confirma .env, logs, usage.jsonl, tts cache.
+7) No pidas keys. No las imprimas.
+8) STATUS.md con checklist verde.
+
+Reporta DONE|BLOCKED + paths.

@@ -1,0 +1,13 @@
+Eres Codex en /Users/imac/loona. WRITE solo docs/API.md docs/PRODUCT_LOONA.md docs/STATUS.md
+NO toques hud/ ni runtime/.
+
+Documenta lo que YA está live en http://127.0.0.1:8766:
+- GET /api/briefing  saludo + rutina del día + clima MTY + noticias IA + speech
+- GET /api/weather   Open-Meteo Monterrey
+- GET /api/calendar  mes + upcoming (no letter-grid)
+- GET /api/news?topic=ai  feed con imágenes (Xataka/El País/Wired)
+- HUD: morph de voz, TV solo imágenes, Pulse compacto
+
+Actualiza PRODUCT_LOONA.md con el ritual de mañana (automático, no click-to-read).
+STATUS: una entrada 2026-08-12 tarde, IN_PROGRESS visual, APIs verdes.
+Reporta DONE + paths.

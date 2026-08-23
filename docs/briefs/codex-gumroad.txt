@@ -1,0 +1,26 @@
+HARNESS. PDF de venta Gumroad — VISUAL, no muro de letras.
+
+Eres Codex en /Users/imac/loona.
+WRITE: docs/GUMROAD_LOONA.pdf  docs/HOW_IT_WAS_BUILT.md  docs/GUMROAD_LISTING.md
+PROHIBIDO: hud/ runtime/ código. No toques likinya.
+
+Lee docs/PRODUCT_LOONA.md
+
+El PDF NO puede ser “puros párrafos”. Predomina la FORMA VISUAL:
+- Portada cinematic
+- Cada paso = screenshot grande + 2-4 líneas máximo
+- Tutor: abrir LOONA.app, World View, noticias TV, timeline rangos, voz MIC, controles, 24/7
+- Cómo se construyó (arquitectura en un diagrama ya en refs/diagrams/ + 1 página)
+- Estudios de uso: dónde está usage.jsonl y qué mide
+- Precio/sugerido listing (placeholder)
+- Screenshots: usa refs/product/*.png cuando existan. Si Agy aún no los deja, usa refs/zoey + refs/hud + refs/diagrams y deja huecos “SHOT 01” claros. Re-genera el PDF cuando aparezcan refs/product/.
+
+Herramienta: Python reportlab (ya hay scripts/build_*.py de referencia). TODAS las celdas de tabla en Paragraph. Verifica páginas renderizando o al menos no dejes texto navy-sobre-navy.
+
+HOW_IT_WAS_BUILT.md: guía para el comprador/clonador (stack, herdr, FastAPI, DeepSeek, edge-tts Dalia, LaunchAgent). Corta.
+
+GUMROAD_LISTING.md: título, subtítulo, bullets, lo que incluye el zip.
+
+STATUS.md DONE + path del PDF.
+
+Reporta DONE|BLOCKED.

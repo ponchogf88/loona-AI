@@ -1,0 +1,20 @@
+HARNESS. Sesión limpia. Eres Agy en /Users/imac/loona.
+
+PROHIBIDO: chrome-devtools MCP. PROHIBIDO find / o find /var. PROHIBIDO runtime/ likinya.
+
+WRITE: refs/product/*.png
+Opcional polish: hud/css solo si el live no se ve Liquid Glass.
+
+Live: http://127.0.0.1:8766  (hard refresh)
+
+Screenshots con `screencapture` de macOS (NO chrome-devtools):
+1. Abre Chrome a esa URL.
+2. Toma pantallas DISTINTAS (filesize distinto):
+   refs/product/01-world.png          cabeza chica + clima + calendario glass + pill Capture
+   refs/product/02-news-tv.png        di "noticias" o botón MAÑANA — TV solo fotos
+   refs/product/03-calendar-glass.png calendario mes se lee
+   refs/product/04-capture-mirror.png pill Capture / espejo
+   refs/product/05-app-icon-dock.png  lockup o icono
+
+Si no puedes Chrome: `screencapture -x refs/product/01-world.png` de la ventana visible.
+Reporta DONE|BLOCKED + md5 de cada PNG. No te quedes callada.

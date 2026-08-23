@@ -1,0 +1,15 @@
+HARNESS. Eres Agy en /Users/imac/loona. NO Soltek. NO runtime/.
+
+WRITE: hud/css hud/js/world.js hud/index.html (solo chrome visual) refs/product/*.png
+PROHIBIDO: chrome-devtools MCP, find /, likinya, runtime/
+
+Norte visual: docs/VISUAL_DNA.md + docs/PLAN_CASA_APEX.md
+Máximo parecido APEX (inspiración, no clonar marca):
+- Busto holograma denso (cabeza oro Zoey + torso cian). No galaxia. No mint.
+- Reloj + °C. SPEAKING. Fila de agentes (ya hay .crew).
+- Se ve ESCRITORIO / void, no página web. Menos botones gordos.
+- Live http://127.0.0.1:8766 Cmd+Shift+R
+
+Screenshots con screencapture, filesize distinto:
+refs/product/01-world.png 02-crew.png 03-speaking.png
+DONE|BLOCKED + evidencia.

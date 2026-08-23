@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOONA</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="brand/icon-192.png" />
+  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png" />
+  <link rel="manifest" href="brand/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/loona.css" />
+  <style>
+    [hidden] { display: none !important; }
+    #hud-wx { color: #fff; font-weight: 600; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div id="world"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="apex-bar">
+    <div class="hud-status">
+      <span class="status-dot"></span>
+      <span class="status-text" id="hud-status">IDLE</span>
+    </div>
+    <time id="hud-clock">--:--</time>
+    <span id="hud-wx">MTY</span>
+    <span class="speak-pill" id="speak-pill">SPEAKING</span>
+  </header>
+
+  <nav class="crew" id="crew" aria-label="Agentes">
+    <button data-agent="cerebro">Cerebro</button>
+    <button data-agent="memoria">Memoria</button>
+    <button data-agent="ops">Ops</button>
+    <button data-agent="ventas">Ventas</button>
+    <button data-agent="salud">Salud</button>
+    <button data-agent="dinero">Dinero</button>
+    <button data-agent="agenda">Agenda</button>
+    <button data-agent="social">Social</button>
+  </nav>
+
+  <aside class="rail" id="rail">
+    <section class="float wx" id="wx">
+      <span class="kicker">Clima</span>
+      <div class="wx-row">
+        <strong id="wx-temp">—°</strong>
+        <div>
+          <p id="wx-label">Leyendo cielo…</p>
+          <small id="wx-span"></small>
+        </div>
+      </div>
+    </section>
+
+    <section class="float cal" id="calendar-panel" hidden>
+      <header>
+        <span class="kicker">Calendario</span>
+        <strong id="cal-month">—</strong>
+      </header>
+      <div class="cal-dow" id="cal-dow"></div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div class="cal-up" id="cal-up"></div>
+    </section>
+  </aside>
+
+  <div class="stage" hidden>
+    <div class="hint" id="mode-hint">LOONA</div>
+    <div class="identity">
+      <div class="wordmark">
+        <img src="brand/lockup.png" alt="LOONA" />
+      </div>
+    </div>
+    <button class="knowledge" id="btn-knowledge">Knowledge</button>
+  </div>
+
+  <aside class="float pulse" id="pulse" hidden>
+    <div class="log" id="chat-messages"></div>
+    <form id="chat-form">
+      <input id="chat-input" type="text" placeholder="Háblale…" autocomplete="off" />
+      <button type="submit">↵</button>
+    </form>
+  </aside>
+
+  <button class="capture-pill" id="btn-capture" type="button" title="Espejo · foto · video" hidden>
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path fill="currentColor" d="M9 3 7.2 5H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2.2L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2.2A2.8 2.8 0 1 0 12 10a2.8 2.8 0 0 0 0 5.6z"/>
+    </svg>
+    Capture
+  </button>
+
+  <div class="dock" hidden>
+    <button class="dock-btn" id="btn-live" title="Gemini Multimodal Live (Voz + Video en Vivo)">LIVE</button>
+    <button class="dock-btn" id="btn-mic" title="Mantén para hablar">MIC</button>
+    <button class="dock-btn" id="btn-dash">VIDA</button>
+    <button class="dock-btn" id="btn-brief">MAÑANA</button>
+    <button class="dock-btn" id="btn-cal">AGENDA</button>
+    <button class="dock-btn" id="btn-tg">TELEGRAM</button>
+    <button class="dock-btn" id="btn-config">CONTROLES</button>
+  </div>
+
+  <div class="tv mirror" id="mirror" aria-hidden="true">
+    <div class="tv-flash" id="mirror-flash"></div>
+    <div class="tv-bezel">
+      <div class="tv-glass">
+        <video id="mirror-video" autoplay playsinline muted></video>
+        <header class="tv-bar">
+          <span id="mirror-title">Espejo</span>
+          <span class="rec-dot" id="rec-dot" hidden>REC</span>
+          <button class="ghost" id="btn-mirror-close">cerrar</button>
+        </header>
+        <div class="mirror-tools">
+          <button type="button" id="btn-snap">Foto</button>
+          <button type="button" id="btn-rec">Video</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tv" id="tv" aria-hidden="true">
+    <div class="tv-flash"></div>
+    <div class="tv-bezel">
+      <div class="tv-glass">
+        <div class="tv-scan"></div>
+        <header class="tv-bar">
+          <span id="tv-title">IA · HOY</span>
+          <button class="ghost" id="btn-tv-close">cerrar</button>
+        </header>
+        <div class="tv-body cinema" id="tv-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="drawer" id="drawer">
+    <header>
+      <span class="kicker">Controles</span>
+      <button class="ghost" id="btn-drawer-close">cerrar</button>
+    </header>
+    <form id="config-form" class="knobs">
+      <label>Partículas <input type="range" id="cfg-particleCount" name="world.particleCount" min="4000" max="16000" step="500" value="13000" /><b id="val-particleCount">13000</b></label>
+      <label>Oro <input type="color" id="cfg-paletteFrom" name="world.paletteFrom" value="#F3D19A" /></label>
+      <label>Cobre <input type="color" id="cfg-paletteTo" name="world.paletteTo" value="#C084FC" /></label>
+      <label>Forma
+        <select id="cfg-headMorph" name="world.headMorph">
+          <option value="sphere" selected>Orbe</option>
+          <option value="humanoid">Humanoid (off)</option>
+          <option value="face">Rostro (off)</option>
+          <option value="moon">Luna</option>
+        </select>
+      </label>
+      <label>Cerebro
+        <select id="cfg-provider" name="brain.provider">
+          <option value="deepseek">DeepSeek</option>
+          <option value="gemini">Gemini</option>
+          <option value="xai">xAI</option>
+          <option value="anthropic">Anthropic</option>
+          <option value="ollama">Ollama</option>
+        </select>
+      </label>
+      <label>Modelo <input type="text" id="cfg-model" name="brain.model" value="deepseek-chat" /></label>
+      <label class="chk"><input type="checkbox" id="cfg-sandbox" name="guardrails.sandbox" checked /> Sandbox</label>
+      <button type="button" class="save" id="btn-save-config">Guardar</button>
+    </form>
+  </aside>
+
+  <div class="sheet" id="knowledge">
+    <article>
+      <header>
+        <span class="kicker">Knowledge</span>
+        <button class="ghost" id="btn-close-knowledge">cerrar</button>
+      </header>
+      <div id="knowledge-body"></div>
+    </article>
+  </div>
+
+  <div class="wake" id="wake" hidden>
+    <button type="button" id="btn-wake">Toca para despertar a LOONA</button>
+  </div>
+
+  <script src="js/stars.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/live.js"></script>
+  <script src="js/os.js"></script>
+</body>
+</html>

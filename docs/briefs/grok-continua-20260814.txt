@@ -1,0 +1,30 @@
+LOONA — REANUDAR (handoff 2026-08-14, Grok del iMac / Hermes).
+
+Chuy dijo: este Grok se queda en Hermes. TÚ eres el Grok del proyecto LOONA. Continúa. No esperes más orden.
+
+Carga /loona-ops primero. Repo: /Users/imac/loona. Live: http://127.0.0.1:8766
+No mezclar Likinya (w2) ni Soltek (wC). No pegar keys. No eres Jarvis. HUD = orbe, no humanoide/Dementor.
+
+HECHO (no reabrir, no reescribir):
+- Runtime FastAPI 127.0.0.1:8766. DeepSeek ya es cerebro de /api/chat (key en runtime/.env).
+- Cast Nest Hub 2 “Choza” = boca. media_lan :8767. TTS + /api/amigo /api/viva /api/pet.
+- HUD orb + constellation + liquid glass (world.js / loona.css). Wake “Loona”.
+- Eyes desktop / FaceTime snap existen. Eufy T8417 luz+RTSP = NEED_HUMAN (EUFY_EMAIL / EUFY_RTSP_URL no están).
+- Dash /dash.html = SHELL, no datos reales.
+- Explainer 2:40 = NEED_HUMAN (Higgsfield 0 créditos).
+
+P0 tuyo ahora (en este orden):
+1. Verify: /api/health, /api/devices, /api/eyes/status, Cast si Choza está en la Wi-Fi. Evidencia real. Si runtime caído, levántalo (loona-up / uvicorn 127.0.0.1:8766).
+2. HUD: confirma orbe (no esfera hueca / no humanoide). Listen/speak moods. No toques Likinya.
+3. Eufy: NO inventes cuenta. Si faltan EUFY_* en .env, deja NEED_HUMAN y sigue.
+4. Docs honestos: PENDIENTES.md + BANDA_CEREBRO_LOONA.md + API.md solo con lo que midas hoy. PAUSA.md está parcialmente viejo (dice 404 de devices; Cast ya se verificó después).
+5. Dashboards: no finjas cifras. Si conectas una fuente real, dilo; si no, SHELL.
+6. Informe 10:00/23:00 MTY no lo borres.
+
+Fuera de alcance:
+- Hermes CLI / ~/.hermes / MacBook gateway (otro Grok, este chat).
+- Instalar Desktop Hermes. Ruedas. Explainer MP4 sin créditos.
+- iCloud Desktop upload. Allow de herdr (Chuy da Yes).
+
+Reporta: DONE | BLOCKED | NEED_HUMAN | IN_PROGRESS + path/URL + siguiente 1 línea.
+Palabra de Chuy: no abandones al interrumpir. Sigue en segundo plano.

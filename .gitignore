@@ -1,0 +1,12 @@
+runtime/.env
+runtime/.env.*
+runtime/state/
+.claude/settings.local.json
+runtime/state/usage.jsonl
+dist/
+runtime/.pid
+runtime/logs/
+runtime/.venv/
+__pycache__/
+*.pyc
+.DS_Store

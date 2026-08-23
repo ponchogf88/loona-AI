@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://loona.local/config/loona.schema.json",
+  "title": "LOONA Config",
+  "description": "Más superficie de configuración que Zoey OS (cerrado). Todo local, versionable, sin prompt-editing mágico.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["identity", "world", "voice", "brain", "memory", "guardrails", "channels", "hud"],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": ["name", "owner", "timezone", "language"],
+      "properties": {
+        "name": { "const": "LOONA" },
+        "owner": { "type": "string" },
+        "timezone": { "type": "string", "default": "America/Monterrey" },
+        "language": { "enum": ["es", "en", "auto"] }
+      }
+    },
+    "world": {
+      "type": "object",
+      "properties": {
+        "particleCount": { "type": "integer", "minimum": 2000, "maximum": 16000, "default": 9000 },
+        "paletteFrom": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "default": "#5EEAD4" },
+        "paletteTo": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "default": "#7C5CFF" },
+        "headMorph": { "enum": ["humanoid", "sphere", "face", "moon"], "default": "humanoid" },
+        "rotationSpeed": { "type": "number", "minimum": 0, "maximum": 2, "default": 0.25 },
+        "bloom": { "type": "boolean", "default": false },
+        "showOrbs": { "type": "boolean", "default": true }
+      }
+    },
+    "voice": {
+      "type": "object",
+      "properties": {
+        "wakeWord": { "type": "string", "default": "loona" },
+        "mode": { "enum": ["push-to-talk", "wake", "typed-only"], "default": "typed-only" },
+        "stt": { "enum": ["browser", "groq", "gemini", "whisper-local", "off"], "default": "browser" },
+        "tts": { "enum": ["browser", "piper", "edge", "gemini", "off"], "default": "browser" }
+      }
+    },
+    "brain": {
+      "type": "object",
+      "properties": {
+        "provider": { "enum": ["ollama", "xai", "gemini", "anthropic", "deepseek", "openai-compatible"], "default": "deepseek" },
+        "model": { "type": "string", "default": "qwen2.5:3b" },
+        "baseUrl": { "type": "string", "default": "http://127.0.0.1:11434/v1" },
+        "dailyTokenCap": { "type": "integer", "minimum": 0, "default": 200000 },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 1.5, "default": 0.4 }
+      }
+    },
+    "memory": {
+      "type": "object",
+      "properties": {
+        "soulPath": { "type": "string", "default": "identity/SOUL.md" },
+        "retentionDays": { "type": "integer", "minimum": 1, "default": 90 },
+        "compound": { "type": "boolean", "default": true }
+      }
+    },
+    "guardrails": {
+      "type": "object",
+      "properties": {
+        "sandbox": { "type": "boolean", "default": true },
+        "allowPublish": { "type": "boolean", "default": false },
+        "allowSecretRead": { "type": "boolean", "default": false },
+        "allowComputerUseOutsideWorkspace": { "type": "boolean", "default": false },
+        "askOnIrreversible": { "type": "boolean", "default": true }
+      }
+    },
+    "channels": {
+      "type": "object",
+      "properties": {
+        "telegram": { "type": "boolean", "default": false },
+        "hud": { "type": "boolean", "default": true },
+        "bind": { "type": "string", "default": "127.0.0.1" }
+      }
+    },
+    "hud": {
+      "type": "object",
+      "properties": {
+        "port": { "type": "integer", "default": 8766 },
+        "chatDefaultWidth": { "type": "integer", "default": 360 },
+        "showActivity": { "type": "boolean", "default": true },
+        "knowledgeOpen": { "type": "boolean", "default": false }
+      }
+    },
+    "study": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": false }
+      }
+    },
+    "companions": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "color": { "type": "string" },
+          "model": { "type": "string" },
+          "skills": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

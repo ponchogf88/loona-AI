@@ -1,0 +1,29 @@
+HARNESS. Termina el diseño. No te detengas.
+
+Eres Agy en /Users/imac/loona. WRITE solo hud/ y refs/product/
+PROHIBIDO: runtime/  loona/  likinya  docs/GUMROAD
+
+Lee docs/PRODUCT_LOONA.md y refs/zoey/*.jpg
+
+ARREGLA ESTO (el founder lo dijo textual):
+- Zoey NO ocupaba toda la pantalla. El HUD actual se DESBORDA de los márgenes y se ve pixelado.
+- Debe verse GLASS (glassmorphism), no cajas planas.
+- Más COLORES. La cabeza es MULTICOLOR como Zoey (ámbar, coral, magenta, violeta, oro en el mismo point cloud). Cero verde menta.
+- Tipografía moderna y elegante. QUITA Cormorant Garamond e IBM Plex. Usa Google Fonts: Outfit + Syne.
+- El movimiento de la cabeza es “alienígena”. Quítalo. Solo rotación Y muy lenta, sin oscilar en X.
+- El canvas 3D vive DENTRO de un escenario redondeado centrado (max 720px alto, márgenes ≥ 56px). No fullscreen WebGL.
+
+Haz:
+1) Reescribe hud/index.html hud/css/loona.css hud/js/world.js (os.js puedes ajustar selectores).
+2) Escenario central glass + cara dentro. Paneles glass. Dock hairline.
+3) Screenshots OBLIGATORIOS (pantalla completa + recortes):
+   refs/product/01-world.png
+   refs/product/02-news-tv.png
+   refs/product/03-timeline.png
+   refs/product/04-voice.png
+   refs/product/05-app-window.png
+   Sin estos, Codex no puede hacer el PDF de venta.
+4) STATUS.md DONE + evidencia.
+
+Si Chrome DevTools MCP sirve, úsalo para screenshots. Si no, indica al humano Cmd+Shift+4 a esos paths, pero PRIMERO deja el diseño bien.
+Reporta DONE|BLOCKED.

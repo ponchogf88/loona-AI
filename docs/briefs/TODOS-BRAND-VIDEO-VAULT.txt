@@ -1,0 +1,11 @@
+LOONA ops. Cargar skill loona-ops.
+
+Brand lock: brand/BRAND.md + brand/lockup.jpg
+Void negro + pocas estrellas SpaceX. Inspiración Aevon dribbble 27478902.
+Explainer: docs/video/STACK_EXPLAINER.md + GUION_EXPLAINER_240.md
+Calidad: youtube APyR9lTFVhI y VAk5lMgzdl0. 2:20–3:10. Higgsfield 0 credits = no inventar MP4.
+Dashboards corto plazo: hud/dash.html (maqueta). Spec docs/dashboards/README.md
+Vault/iCloud: Desktop/Projects/LOONA
+PENDIENTES.md es la verdad.
+
+Write-paths no se cruzan.

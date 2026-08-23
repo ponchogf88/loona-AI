@@ -1,0 +1,24 @@
+HARNESS. Termina. No reescribas el HUD.
+
+Eres Agy en /Users/imac/loona.
+WRITE solo: refs/product/*.png
+PROHIBIDO tocar: hud/index.html hud/css hud/js runtime/ docs/GUMROAD likinya
+
+El founder ya corrigió el producto. El HUD NUEVO está live en http://127.0.0.1:8766
+NO lo deshagas. NO vuelvas a meter el canvas en una tarjeta glass. NO pongas rotación Y lenta.
+
+Lo que tiene que verse (abre Chrome en esa URL, hard refresh):
+1) Cabeza flotando en el vacío, densa, multicolor. Al hablar (botón MAÑANA) CAMBIA DE FORMA con la voz — mandíbula, mejillas, corona que se desprende. No un disco magenta en una caja.
+2) Izquierda: widget CLIMA Monterrey + CALENDARIO de mes (rejilla de días, hoy marcado, 2-3 eventos). Cero línea vertical flaca.
+3) Derecha abajo: Pulse CHICO (una cajita, no una columna de toda la pantalla).
+4) Al primer load o al tocar MAÑANA: TV CRT automática con SOLO FOTOS de noticias de IA. Cero letras de la nota.
+
+Screenshots DISTINTOS (filesize distinto, contenido distinto):
+- refs/product/01-world.png     cabeza + clima + calendario, Pulse chico
+- refs/product/02-news-tv.png   TV encendida, solo imágenes
+- refs/product/03-timeline.png  calendario mes a la izquierda, se lee
+- refs/product/04-voice.png     cabeza MORPHING (captura mientras habla)
+- refs/product/05-app-window.png ventana completa
+
+Si los 5 PNG salen con el mismo filesize, están mal. Repite.
+Reporta DONE + md5 de cada PNG.
