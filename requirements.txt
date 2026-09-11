@@ -1,0 +1,11 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+httpx>=0.27,<1.0
+jsonschema>=4.22,<5.0
+edge-tts>=7.0,<8.0
+python-multipart>=0.0.12,<1.0
+icalendar>=6.0,<7.0
+pychromecast>=14.0,<15.0
+pyeufysecurity>=0.4.4,<0.5
+websockets>=13.0
+
